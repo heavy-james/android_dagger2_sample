@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +15,6 @@ import sample.heavy.dagger2.R;
 import sample.heavy.dagger2.data.Car;
 
 public class HomeFragment extends Fragment implements HomeContract.IHomeView, View.OnClickListener {
-
-    private final static String TAG = HomeFragment.class.getCanonicalName();
 
     HomeContract.IHomePresenter mHomePresenter;
 
@@ -33,11 +30,6 @@ public class HomeFragment extends Fragment implements HomeContract.IHomeView, Vi
         mHomePresenter = presenter;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.v(TAG, "onCreate");
-    }
 
     @Override
     public void onResume() {
@@ -45,7 +37,6 @@ public class HomeFragment extends Fragment implements HomeContract.IHomeView, Vi
         mHomePresenter.takeView(this);
         mHomePresenter.start();
     }
-
 
     @Nullable
     @Override

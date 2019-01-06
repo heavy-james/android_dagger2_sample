@@ -14,7 +14,6 @@ public class CarRepository implements CarResource {
 
     }
 
-
     public static CarRepository getInstance() {
         if (mInstance == null) {
             synchronized (CarRepository.class) {
@@ -34,5 +33,4 @@ public class CarRepository implements CarResource {
         car.setName(name);
         return car;
     }
-
 }
