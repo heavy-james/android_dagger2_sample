@@ -1,5 +1,7 @@
 package sample.heavy.dagger2.home;
 
+import javax.inject.Inject;
+
 import sample.heavy.dagger2.base.IView;
 import sample.heavy.dagger2.data.CarResource;
 
@@ -9,6 +11,7 @@ public class HomePresenter implements HomeContract.IHomePresenter {
 
     private CarResource mCarResource;
 
+    @Inject
     public HomePresenter(CarResource carResource) {
         mCarResource = carResource;
     }

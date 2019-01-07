@@ -9,10 +9,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="28sp"
-        android:textColor="@android:color/black"
         android:layout_marginTop="80dp"
-        android:text="home fragment" />
+        android:text="home fragment"
+        android:textColor="@android:color/black"
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/btn_next_car"
