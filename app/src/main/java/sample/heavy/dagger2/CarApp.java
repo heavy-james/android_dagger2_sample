@@ -1,18 +1,12 @@
 package sample.heavy.dagger2;
 
-import android.app.Application;
+import dagger.android.AndroidInjector;
+import dagger.android.support.DaggerApplication;
 
-public class CarApp extends Application {
-
-    AppComponent mAppComponent;
+public class CarApp extends DaggerApplication {
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        mAppComponent = DaggerAppComponent.builder().build();
-    }
-
-    public AppComponent appComponent() {
-        return mAppComponent;
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        return DaggerAppComponent.builder().build();
     }
 }
